@@ -4,11 +4,11 @@
 - [Puppy Bank instruction](https://vncrtech.medium.com/practice-test-automation-using-a-local-web-application-f8310ca37637)
 - [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Run this command:
-```cmd
+```
 docker run -d -p 8000:8000 vncrtech/puppybank
 ```
 - Puppy Bank will be accessible on:
-```h
+```
 http://localhost:8000  
 ```
 - Add to settings.json:
