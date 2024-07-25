@@ -2,13 +2,23 @@
   "name": "playwright-bdd-docs",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "cucumber-js",
+    "show-report": "npx ts-node generate-report.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.45.2",
-    "@types/node": "^20.14.11"
+    "@cucumber/cucumber": "^10.8.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.45.3",
+    "@types/cucumber": "^7.0.0",
+    "@types/node": "^20.14.12",
+    "cucumber-html-reporter": "^6.0.0",
+    "playwright": "^1.45.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }
