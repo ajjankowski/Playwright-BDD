@@ -11,3 +11,15 @@ docker run -d -p 8000:8000 vncrtech/puppybank
 ```  
 http://localhost:8000  
 ```
+- Add to settings.json:
+```
+    "cucumber.features": [
+        "src/features/*.feature",
+    ],
+    "cucumber.glue": [
+        "src/steps/*.steps.ts",
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "CucumberOpen.cucumber-official"
+    }
+```
