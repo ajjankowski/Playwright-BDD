@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
-    "show-report": "npx ts-node generate-report.ts"
+    "show-report": "npx ts-node generate-report.ts",
+    "convert-json-to-md": "node convert-json-to-md.mjs"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +21,8 @@
     "playwright": "^1.45.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "markdown-table": "^3.0.3"
   }
 }
