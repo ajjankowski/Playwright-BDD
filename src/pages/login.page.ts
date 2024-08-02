@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
 export class LoginPage {
     constructor(private page: Page) { }
@@ -16,11 +16,6 @@ export class LoginPage {
     loginHeader = this.page.getByRole('heading', { name: 'Welcome to Puppy Bank' });
 
     aboutTheAppButton = this.page.getByRole('link', { name: 'About the App' });
-    gettingStartedPanel = this.page.getByRole('heading', { name: 'Getting Started' });
-    puppyBankFeaturesPanel = this.page.getByRole('heading', { name: 'Puppy Bank Features' });
-    aboutPuppyBankPanel = this.page.getByRole('heading', { name: 'About Puppy Bank' });
-    whyItWasMadePanel = this.page.getByRole('heading', { name: 'Why it was made?' });
-    sourcesPanel = this.page.getByRole('heading', { name: 'Sources' });
     exploreNowButton = this.page.getByRole('link', { name: 'Explore Now' });
 
     async login(userLogin: string, userPassword: string): Promise<void> {
@@ -33,5 +28,10 @@ export class LoginPage {
         await this.userProfileButton.click();
         await this.logoutButton.click();
         await this.logoutConfirmationButton.click();
+    }
+
+    async checkPanel(panelName: string): Promise<void> {
+        const panel = this.page.getByRole('heading', { name: panelName });
+        await expect(panel).toBeVisible();
     }
 }

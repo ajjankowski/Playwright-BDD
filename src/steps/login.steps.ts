@@ -52,24 +52,8 @@ When('I open About the App subpage', async () => {
     await loginPage.aboutTheAppButton.click();
 });
 
-Then('I should see the Getting Started panel', async () => {
-    await expect(loginPage.gettingStartedPanel).toBeVisible();
-});
-
-Then('I should see the Puppy Bank Features panel', async () => {
-    await expect(loginPage.puppyBankFeaturesPanel).toBeVisible();
-});
-
-Then('I should see the About Puppy Bank panel', async () => {
-    await expect(loginPage.aboutPuppyBankPanel).toBeVisible();
-});
-
-Then('I should see the Why It Was Made panel', async () => {
-    await expect(loginPage.whyItWasMadePanel).toBeVisible();
-});
-
-Then('I should see the Sources panel', async () => {
-    await expect(loginPage.sourcesPanel).toBeVisible();
+Then('I should see the {string} panel', async (panelName: string) => {
+    await loginPage.checkPanel(panelName);
 });
 
 When('I quit from About the App subpage', async () => {
