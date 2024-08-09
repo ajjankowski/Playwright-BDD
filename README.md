@@ -12,7 +12,7 @@ docker run -d -p 8000:8000 vncrtech/puppybank
 http://localhost:8000  
 ```
 - Install Cucumber extension  
-- Add to settings.json:  
+- Add to settings.json in VSCode:  
 ```json
     "cucumber.features": [
         "src/features/*.feature"
